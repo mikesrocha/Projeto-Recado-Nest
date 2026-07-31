@@ -1,0 +1,32 @@
+@baseUrl = http://localhost:3000
+
+# RECADOS
+### Lista todos os recados
+GET {{baseUrl}}/recados/
+?limit=0
+&offset=0
+
+### Lista apenas um recado
+GET {{baseUrl}}/recados/2/
+
+### Cria um recado
+POST {{baseUrl}}/recados/
+Content-Type: application/json
+
+{
+"texto": "Novo Recado",
+"de": "Joana",
+"para": "João"
+}
+
+### Atualiza um recado
+PATCH {{baseUrl}}/recados/2/
+Content-Type: application/json
+
+{
+"texto": "Recado",
+"lido": true
+}
+
+### Apaga um recado
+DELETE {{baseUrl}}/recados/2/
