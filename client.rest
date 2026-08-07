@@ -30,3 +30,39 @@ Content-Type: application/json
 
 ### Apaga um recado
 DELETE {{baseUrl}}/recados/2/
+
+
+#
+
+
+# Pessoas
+### Lista todas pessoas.
+GET {{baseUrl}}/pessoas/
+?limit=0
+&offset=0
+
+### Lista apenas uma Pessoa
+GET {{baseUrl}}/pessoas/2/
+
+### Cria uma pessoa
+POST {{baseUrl}}/pessoas/
+Content-Type: application/json
+
+{
+"nome": "Luiz",
+"email": "email1@email.com",
+"password": "123456"
+
+}
+
+### Atualiza uma pessoa
+PATCH {{baseUrl}}/pessoas/2/
+Content-Type: application/json
+
+{
+"texto": "Recado",
+"lido": true
+}
+
+### Apaga uma pessoa
+DELETE {{baseUrl}}/pessoas/2/
